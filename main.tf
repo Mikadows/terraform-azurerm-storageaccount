@@ -14,9 +14,7 @@ provider "azurerm" {
 
 data "azurerm_resource_group" "rg_azure_tf" {
   name     = "RG1"
-//  location = var.azure_location_vara
 }
-
 
 resource "azurerm_storage_account" "storage_azure_tf" {
   name                     = var.azure_storageaccount_name
