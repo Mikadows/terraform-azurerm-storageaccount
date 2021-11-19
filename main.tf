@@ -1,9 +1,10 @@
 terraform {
-  backend "azurerm" {
-    resource_group_name = "RG1"
-    storage_account_name = "gsistorageaccount"
-    container_name = "terraformcontainer"
-    key = ""
+  backend "remote" {
+    organization = "GwendalPerso"
+
+    workspaces {
+      name = "Gwendal-cli"
+    }
   }
 }
 
